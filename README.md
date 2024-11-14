@@ -13,6 +13,7 @@
 The following packages are mandatory for everything to work correctly.
 - postgresql
 - psycopg2
+- folium
 
 # Run Linux commands [Windows]
 Install `m2-base` package through **Anaconda Navigator** or **Anaconda Prompt**.
