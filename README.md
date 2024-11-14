@@ -1,11 +1,11 @@
 # Steps to Install Packages in Anaconda
-- Using Anaconda Navigator
+## Using Anaconda Navigator
     1. Open Anaconda Navigator.
     2. Go to **Environments**.
     3. Set filter to **Not Installed**.
     4. Check Package and Click **Apply** to Install.
 
-- Using Anaconda Prompt
+## Using Anaconda Prompt
     1. Open Anaconda Prompt.
     2. Run `conda install PACKAGE_NAME`.
 
