@@ -1,13 +1,13 @@
 # Steps to Install Packages in Anaconda
 ## Using Anaconda Navigator
-1. Open Anaconda Navigator.
-2. Go to **Environments**.
-3. Set filter to **Not Installed**.
-4. Check Package and Click **Apply** to Install.
+1. Open Anaconda Navigator
+2. Go to **Environments**
+3. Set filter to **Not Installed**
+4. Check Package and Click **Apply** to Install
 
 ## Using Anaconda Prompt
-1. Open Anaconda Prompt.
-2. Run `conda install PACKAGE_NAME`.
+1. Open Anaconda Prompt
+2. Run `conda install PACKAGE_NAME`
 
 # Install Required Packages
 The following packages are mandatory for everything to work correctly.
@@ -44,7 +44,7 @@ Install `m2-base` package through **Anaconda Navigator** or **Anaconda Prompt**.
 # Setup MongoDB
 1. Open Anaconda Prompt
 2. Install mongodb: `conda install mongodb`
-3. Create a directory to store database data.
+3. Create a directory to store database data
 4. Start Mongo Daemon: `mongod --dbpath /path/to/store/data`
 
 # Fix Notebooks Issues
