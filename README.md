@@ -1,15 +1,16 @@
 # Steps to Install Packages in Anaconda
-## Using Anaconda Navigator
+
+### Using Anaconda Navigator
 1. Open Anaconda Navigator
 2. Go to **Environments**
 3. Set filter to **Not Installed**
 4. Check Package and Click **Apply** to Install
 
-## Using Anaconda Prompt
+### Using Anaconda Prompt
 1. Open Anaconda Prompt
 2. Run `conda install PACKAGE_NAME`
 
-# Install Required Packages
+# Required Packages for TM351 Notebooks
 The following packages are mandatory for everything to work correctly.
 - postgresql
 - psycopg2
@@ -30,7 +31,7 @@ The following packages are mandatory for everything to work correctly.
 - conda-forge::rdflib
 - conda-forge::sparqlwrapper
 
-# Run Linux commands on Windows
+# Run Linux Commands on Windows
 Install `m2-base` package through **Anaconda Navigator** or **Anaconda Prompt**.
 
 # Setup PostgreSQL
@@ -47,7 +48,13 @@ Install `m2-base` package through **Anaconda Navigator** or **Anaconda Prompt**.
 3. Create a directory to store database data
 4. Start Mongo Daemon: `mongod --dbpath /path/to/store/data`
 
-# Fix Notebooks Issues
+<br>
+
+---
+
+<br>
+
+# TM351 Notebooks Issues
 
 These notebooks are almost 9 years old, they are ancient, since then, dataset URLs have changed, and libraries and their methods have been deprecated.
 
@@ -57,7 +64,6 @@ Here, I'll document the necessary changes to fix some of the issues I've encount
 
 - `ignore` is deprecated. Instead, catch exceptions explicitly or use `coerce` to convert unparsable values to NaN.
 
-    
     ```python
     # Old
     pd.to_numeric(df['Amount'], errors='ignore')
@@ -100,24 +106,26 @@ Here, I'll document the necessary changes to fix some of the issues I've encount
     ```
 
 ## Notebook 2.2.3
-change `pd.read_excel` parameter `sheetname` to `sheet_name`.
-```python
-    # old
-    pd.read_excel('data/tfl-buses-type.xls', sheetname='Data')[:3]
+- change `pd.read_excel` parameter `sheetname` to `sheet_name`.
 
-    # new
-    pd.read_excel('data/tfl-buses-type.xls', sheet_name='Data')[:3]
-```
+    ```python
+        # old
+        pd.read_excel('data/tfl-buses-type.xls', sheetname='Data')[:3]
+
+        # new
+        pd.read_excel('data/tfl-buses-type.xls', sheet_name='Data')[:3]
+    ```
 
 ## Notebook 3.1
-Declare Regex using raw string.
-```python
-    # old
-    "...^\d..."
+- Declare Regex using raw string.
 
-    # new
-    r"...^\d..."
-```
+    ```python
+        # old
+        "...^\d..."
+
+        # new
+        r"...^\d..."
+    ```
 
 ## Notebook 3.4
 
@@ -153,12 +161,14 @@ A workaround for this issue is to use:
     ```
 - Aggregate Functions like `sum`, `median` now default to `numeric_only=False`, Thus:
     - Making it necessary to specify the columns to aggregate.
+
         ```python
         # old 
         df.pivot_table(index=['Directorate'], aggfunc=np.sum)
 
         # new
         df.pivot_table(index=['Directorate'], values=["Amount"], aggfunc="sum")
+        ```
 
     - The `ASIDE` and its exercise should be removed.
 
@@ -167,6 +177,7 @@ A workaround for this issue is to use:
 ## Notebook 4.3
 - Change `subplots='True'` to `subplots=True`.
 - Nested renamer is no longer supported.
+
     ```python
     # old
     groupeddata['Mark'].agg({'top mark':'max', 
@@ -181,6 +192,7 @@ A workaround for this issue is to use:
 
 ## Notebook 4.7
 - `df.pivot()` no longer accpets arguments by position.
+
     ```python
     # old
     df_wide = df_long.pivot('expense types', 'directorates', 'total')
@@ -196,6 +208,7 @@ A workaround for this issue is to use:
 
 ## Notebook 14.1
 - `find().count()` is obsolete use `count_documents()` instead.
+
     ```python
     # old
     tc.find({'name': 'Peter'}).count()
@@ -206,6 +219,7 @@ A workaround for this issue is to use:
 
 ## Notebook 15.3
 - DataFrame.drop only takes two positional arguments
+
     ```python
     # old
     results_df.drop('Pedal cycles', 1)
@@ -215,6 +229,7 @@ A workaround for this issue is to use:
 
 ## Notebook 15.4
 - geoNear is obsolete, use $geoNear aggregation instead.
+
     ```python
     # old
     nearest_road_result = db.command(SON([('geoNear', 'roads'), 
@@ -251,6 +266,7 @@ A workaround for this issue is to use:
 
 ## Notebook 20.2
 - `KNeighborsClassifier.predict` expects a 2D container not a series.
+
     ```python
     # old
     return myClassifier.predict(trainingData_df.loc[ix])[0]
@@ -261,6 +277,7 @@ A workaround for this issue is to use:
 
 ## Notebook 23.1
 - As of [PostgreSQL 15](https://www.postgresql.org/about/news/postgresql-15-released-2526/#:~:text=PostgreSQL%2015%20also%20revokes%20the%20CREATE%20permission%20from%20all%20users%20except%20a%20database%20owner%20from%20the%20public%20(or%20default)%20schema.), privileges to alter the schema is only granted to database owner. Must grant privileges manually.
+    
     ```sql
     GRANT ALL ON SCHEMA public TO MY_NEW_USER;
     ```
