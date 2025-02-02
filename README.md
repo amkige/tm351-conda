@@ -36,11 +36,11 @@ Install `m2-base` package through **Anaconda Navigator** or **Anaconda Prompt**.
 
 # Setup PostgreSQL
 1. Open Anaconda Prompt
-2. Install postgresql `conda install postgresql`
+2. Install PostgreSQL `conda install postgresql`
 3. Initialize a database cluster `initdb -D pg_cluster`
-4. Start PostgreSQL Server `pg_ctl -D pg_cluster start`
-5. Create a User and set the Password `createuser --pwprompt dbuser` (set password to dbpass)
-6. Create a Database `createdb --owner=dbuser tm351db`
+4. Start the server `pg_ctl -D pg_cluster start`
+5. Create a user and set a password `createuser --pwprompt dbuser` (set password to dbpass)
+6. Create a database `createdb --owner=dbuser tm351db`
 
 # Setup MongoDB
 1. Open Anaconda Prompt
