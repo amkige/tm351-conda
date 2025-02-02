@@ -46,7 +46,7 @@ Install `m2-base` package through **Anaconda Navigator** or **Anaconda Prompt**.
 1. Open Anaconda Prompt
 2. Install mongodb `conda install mongodb`
 3. Create a directory to store database data
-4. Start Mongo Daemon `mongod --dbpath /path/to/store/data`
+4. Start the server `mongod --dbpath /path/to/store/data`
 
 <br>
 
