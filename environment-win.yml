@@ -1,0 +1,25 @@
+name: tm351
+channels:
+  - conda-forge
+dependencies:
+  - jupyter
+  - chardet
+  - postgresql
+  - psycopg2
+  - folium
+  - pandasql
+  - xlrd
+  - fastkml
+  - jupysql
+  - lxml
+  - matplotlib
+  - seaborn
+  - openpyxl
+  - mongodb
+  - mongo-tools
+  - pymongo
+  - scipy
+  - scikit-learn
+  - rdflib
+  - sparqlwrapper
+  - m2-base
