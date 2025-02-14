@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_5294cd33a2ccbf75b6e263544c951f70 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-dvf/0.3.0/leaflet-dvf.markers.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_5294cd33a2ccbf75b6e263544c951f70" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_5294cd33a2ccbf75b6e263544c951f70 = L.map(
+                "map_5294cd33a2ccbf75b6e263544c951f70",
+                {
+                    center: [52.024696, -0.71071],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 14,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_b7d02a48a468ab87731df27241123e58 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 16, "maxZoom": 16, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_5294cd33a2ccbf75b6e263544c951f70);
+        
+    
+            var marker_b16ed80fb941c11bd36ad54a3ff60ea8 = L.marker(
+                [52.024696, -0.71071],
+                {}
+            ).addTo(map_5294cd33a2ccbf75b6e263544c951f70);
+        
+    
+            var marker_43461bce15e8ff5bea79ac4e630b9985 = L.marker(
+                [52.025638, -0.702336],
+                {}
+            ).addTo(map_5294cd33a2ccbf75b6e263544c951f70);
+        
+    
+        var popup_48d1433579b3043771b9af712522013a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_35a2bb5d5f83ac3743db860b9d399cb4 = $(`<div id="html_35a2bb5d5f83ac3743db860b9d399cb4" style="width: 100.0%; height: 100.0%;">The East Campus of the Open University</div>`)[0];
+                popup_48d1433579b3043771b9af712522013a.setContent(html_35a2bb5d5f83ac3743db860b9d399cb4);
+            
+        
+
+        marker_43461bce15e8ff5bea79ac4e630b9985.bindPopup(popup_48d1433579b3043771b9af712522013a)
+        ;
+
+        
+    
+    
+            var circle_marker_53c930c472da655edc423ae5a8dd94bd = L.circleMarker(
+                [52.0272, -0.7104],
+                {"bubblingMouseEvents": true, "color": "#3186ec", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3186ec", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 40, "stroke": true, "weight": 3}
+            ).addTo(map_5294cd33a2ccbf75b6e263544c951f70);
+        
+    
+        var popup_10b5824e970495c41e98f99b63beb83a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2215525138bc8091f3d06361257c188d = $(`<div id="html_2215525138bc8091f3d06361257c188d" style="width: 100.0%; height: 100.0%;">The Cricket Pitch at the Open University</div>`)[0];
+                popup_10b5824e970495c41e98f99b63beb83a.setContent(html_2215525138bc8091f3d06361257c188d);
+            
+        
+
+        circle_marker_53c930c472da655edc423ae5a8dd94bd.bindPopup(popup_10b5824e970495c41e98f99b63beb83a)
+        ;
+
+        
+    
+    
+            var regular_polygon_marker_14ca88b8582804a505a1667bbc6680b1 = new L.RegularPolygonMarker(
+                [52.025, -0.706],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#132b5e", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "numberOfSides": 3, "opacity": 1.0, "radius": 20, "rotation": 20, "stroke": true, "weight": 3}
+            ).addTo(map_5294cd33a2ccbf75b6e263544c951f70);
+        
+    
+        var popup_0da01eeab176ca72a8e1d428d81ac040 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_76aa2e22df68defbc83a429d4fc27322 = $(`<div id="html_76aa2e22df68defbc83a429d4fc27322" style="width: 100.0%; height: 100.0%;">Visitor car park</div>`)[0];
+                popup_0da01eeab176ca72a8e1d428d81ac040.setContent(html_76aa2e22df68defbc83a429d4fc27322);
+            
+        
+
+        regular_polygon_marker_14ca88b8582804a505a1667bbc6680b1.bindPopup(popup_0da01eeab176ca72a8e1d428d81ac040)
+        ;
+
+        
+    
+    
+            var regular_polygon_marker_309ebebe0ebcf063b734e5f2ffc66d7b = new L.RegularPolygonMarker(
+                [52.0244, -0.7107],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "numberOfSides": 6, "opacity": 1.0, "radius": 20, "rotation": 10, "stroke": true, "weight": 3}
+            ).addTo(map_5294cd33a2ccbf75b6e263544c951f70);
+        
+    
+        var popup_892b63954526b04962e13096a73f5c1c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b92e5b67280a05f80c5ea765f6302398 = $(`<div id="html_b92e5b67280a05f80c5ea765f6302398" style="width: 100.0%; height: 100.0%;">3 Disabled parking spaces</div>`)[0];
+                popup_892b63954526b04962e13096a73f5c1c.setContent(html_b92e5b67280a05f80c5ea765f6302398);
+            
+        
+
+        regular_polygon_marker_309ebebe0ebcf063b734e5f2ffc66d7b.bindPopup(popup_892b63954526b04962e13096a73f5c1c)
+        ;
+
+        
+    
+</script>
+</html>
