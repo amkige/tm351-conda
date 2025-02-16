@@ -4,7 +4,7 @@ Conda is a command-line tool for managing packages and environments. In TM351, i
 # Getting Started
 
 ## 1. Download & Install Miniforge
-Miniforge is a wrapper to easily setup Conda. [Click Here to Download](https://conda-forge.org/download/). Follow instructions to install into your OS. Now you can run Conda via the Miniforge prompt in the Start menu on Windows, or via `~/miniforge3/bin/conda` on Mac & Linux.
+Miniforge is an open-source Conda installer. [Click Here](https://conda-forge.org/download/) to Download. Follow instructions to install into your OS. Now you can run Conda via the Miniforge prompt in the Start menu on Windows, or via `conda` command on Mac & Linux.
 
 ## 2. Clone Repository
 Clone or download this repository.
