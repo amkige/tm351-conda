@@ -46,7 +46,7 @@ git clone https://github.com/amkige/tm351-conda.git
     ```
 
 ## 4. Setup PostgreSQL
-1. Activate `tm351` environment
+1. Ensure `tm351` environment is active
 
     ```
     conda activate tm351
@@ -77,29 +77,25 @@ git clone https://github.com/amkige/tm351-conda.git
     ```
 
 ## 5. Setup MongoDB
-1. Activate `tm351` environment
+1. Ensure `tm351` environment is active
 
     ```
     conda activate tm351
     ```
-    
-2. Install mongodb
-    ```
-    conda install mongodb
-    ```
-3. Create a directory to store database data
+
+2. Create a directory to store database data
 
     ```
     mkdir monogodb_data
     ```
 
-4. Start the server
+3. Start the server
 
     ```
     mongod --dbpath monogodb_data --fork --logpath mongodb_logs
     ```
 
-5. Import Accidents Database
+4. Import Accidents Database
 
     ```
     mongorestore --drop --gzip --archive=./accidents_database.gz
