@@ -91,6 +91,7 @@ git clone https://github.com/amkige/tm351-conda.git
    ```
 
 ## 5. Setup MongoDB
+> [!NOTE] [Windows] You must start the prompt as admin 
 
 1. Ensure `tm351` environment is active
 
@@ -101,12 +102,21 @@ git clone https://github.com/amkige/tm351-conda.git
 2. Create a directory to store database data
 
    ```
+   # Windows
+   mkdir %appdata%\monogodb_data
+
+   # Mac & Linux
    mkdir monogodb_data
    ```
 
 3. Start the server
 
    ```
+   # Windows
+   mongod --dbpath %appdata%\monogodb_data --logpath %appdata%\mongodb_logs --install
+   net start MongoDB
+
+   # Mac & Linux
    mongod --dbpath monogodb_data --fork --logpath mongodb_logs
    ```
 
@@ -128,6 +138,9 @@ git clone https://github.com/amkige/tm351-conda.git
 > pg_ctl -D pg_cluster -l pg_log start
 >
 > # MongoDB
+> # Windows
+> net start MongoDB
+> # Mac & Linux
 > mongod --dbpath monogodb_data --fork --logpath mongodb_logs
 > ```
 >
@@ -138,5 +151,8 @@ git clone https://github.com/amkige/tm351-conda.git
 > pg_ctl -D pg_cluster stop
 >
 > # MongoDB
+> # Windows
+> net stop MongoDB
+> # Mac & Linux
 > mongod --dbpath monogodb_data --shutdown
 > ```
