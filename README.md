@@ -91,7 +91,8 @@ git clone https://github.com/amkige/tm351-conda.git
    ```
 
 ## 5. Setup MongoDB
-> [!NOTE] [Windows] You must start the prompt as admin 
+> [!NOTE]
+> [Windows] You must start the prompt as administrator
 
 1. Ensure `tm351` environment is active
 
